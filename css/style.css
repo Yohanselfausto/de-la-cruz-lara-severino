@@ -1,0 +1,751 @@
+/* ==========================================
+RESET & GLOBAL
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #FFFFFF;
+    color: #1a1a1a;
+    line-height: 1.5;
+}
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; }
+ul { list-style: none; }
+
+/* ==========================================
+VARIABLES
+========================================== */
+:root {
+    --navy: #0a1a2f;
+    --gold: #b8860b;
+    --gold-light: #d4a017;
+    --cream: #f5f0e8;
+    --white: #ffffff;
+    --text-dark: #1e1e1e;
+    --text-light: #666666;
+    --border-light: #e0dcd3;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+HEADER
+========================================== */
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: rgba(10, 26, 47, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 20px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap:0;
+}
+
+.logo-img{
+    height: 80px;
+    width: auto;
+    transform: scale(1.75) translateY(3px);
+    transform-origin: center;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-firma {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.logo-firma span { color: var(--gold); }
+
+.logo-sub {
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 2px;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    transition: 0.3s;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover,
+.menu a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+}
+
+.btn-header {
+    background: var(--gold);
+    padding: 10px 22px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-header:hover { background: var(--gold-light); }
+
+/* ==========================================
+GOLD DECORATORS
+========================================== */
+.gold-line {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 12px auto 20px;
+}
+
+.gold-line-left {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin: 14px 0 22px;
+}
+
+.section-eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-eyebrow.light { color: var(--gold); }
+
+/* ==========================================
+HERO
+========================================== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #0a1a2f 0%, #0d2340 60%, #0a1a2f 100%);
+    padding: 100px 0 60px;
+    overflow: hidden;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.8rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.hero-text h1 span { color: var(--gold); }
+
+.hero-desc {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 36px;
+    max-width: 480px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--gold);
+    padding: 13px 28px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,0.4);
+    padding: 13px 28px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-secondary:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.hero-image img {
+    max-height: 75vh;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* ==========================================
+SERVICIOS
+========================================== */
+.services {
+    padding: 90px 0;
+    background: #fafaf8;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.services-header span {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.services-header p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border-light);
+    border: 1px solid var(--border-light);
+}
+
+.service-item {
+    text-align: center;
+    padding: 36px 20px;
+    background: white;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    background: #fffdf7;
+}
+
+.service-icon {
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    transition: 0.3s;
+}
+
+.service-item:hover .service-icon {
+    background: var(--gold);
+}
+
+.service-item:hover .service-icon i {
+    color: white;
+}
+
+.service-icon i {
+    font-size: 1.3rem;
+    color: var(--gold);
+    transition: 0.3s;
+}
+
+.service-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.service-item p {
+    font-size: 0.82rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ==========================================
+SOBRE NOSOTROS
+========================================== */
+.about {
+    padding: 90px 0;
+    background: var(--navy);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.about-left .section-eyebrow { color: var(--gold); }
+
+.about-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.2;
+}
+
+.about-left p {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.about-team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.member-img-wrap {
+    overflow: hidden;
+    border-bottom: 3px solid var(--gold);
+    margin-bottom: 14px;
+}
+
+.member-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    filter: grayscale(10%);
+    transition: 0.4s;
+}
+
+.team-member:hover .member-img {
+    transform: scale(1.03);
+    filter: grayscale(0%);
+}
+
+.team-member h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 0.78rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+/* ==========================================
+CONTACTO
+========================================== */
+.contact {
+    padding: 90px 0;
+    background: white;
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-left h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.contact-left > p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.contact-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-info-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.contact-info-list i {
+    color: var(--gold);
+    width: 18px;
+    font-size: 1rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px 16px;
+    border: 1px solid var(--border-light);
+    font-family: 'Inter', sans-serif;
+    font-size: 13.5px;
+    color: var(--text-dark);
+    background: #fafaf8;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: white;
+}
+
+.contact-form button {
+    background: var(--gold);
+    border: none;
+    padding: 14px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-form button:hover { background: var(--gold-light); }
+
+.response-note {
+    font-size: 11.5px;
+    color: var(--text-light);
+    text-align: center;
+    margin-top: 4px;
+}
+
+/* ==========================================
+FOOTER
+========================================== */
+.footer {
+    background: var(--navy);
+    padding: 55px 0 28px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.footer-logo-img{
+    height: 70px;
+    width: auto;
+    transform: scale(1.55);
+    transform-origin: center;
+}
+
+.logo-firma-footer {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.logo-firma-footer span { color: var(--gold); }
+
+.logo-sub-footer {
+    font-size: 0.62rem;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.65);
+    margin-top: 4px;
+}
+
+.logo-eslogan-footer {
+    font-size: 0.65rem;
+    color: var(--gold);
+    font-style: italic;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-social a:hover {
+    background: var(--gold);
+    color: white;
+    border-color: var(--gold);
+}
+
+.footer-links {
+    display: flex;
+    gap: 70px;
+    flex-wrap: wrap;
+}
+
+.footer-col h4 {
+    color: white;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.footer-col ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-col a,
+.footer-col li {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.83rem;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-col a:hover { color: var(--gold); }
+
+.footer-col i {
+    color: var(--gold);
+    width: 16px;
+    font-size: 0.82rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+}
+
+.footer-quote {
+    color: var(--gold) !important;
+    font-style: italic;
+    font-size: 0.75rem !important;
+}
+
+/* ==========================================
+WHATSAPP
+========================================== */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 56px;
+    height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    transition: 0.3s;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+.whatsapp-btn:hover { transform: scale(1.08); }
+
+/* ==========================================
+RESPONSIVE
+========================================== */
+@media (max-width: 1100px) {
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .hero-text h1 { font-size: 3.2rem; }
+}
+
+@media (max-width: 992px) {
+    .hero-container { grid-template-columns: 1fr; }
+    .hero-image { display: none; }
+    .about-container { grid-template-columns: 1fr; gap: 40px; }
+    .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-top { flex-direction: column; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 768px) {
+    .menu, .btn-header { display: none; }
+    .hero-text h1 { font-size: 2.6rem; }
+    .about-team { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .form-row { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    .footer-links { flex-direction: column; gap: 30px; }
+    .about-left h2, .contact-left h2 { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .about-team { grid-template-columns: 1fr; max-width: 200px; margin: 0 auto; }
+}
