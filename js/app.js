@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             status.textContent = "";
 
             try {
-                const res = await fetch("https://formsubmit.co/ajax/info@delacruzlaraseverino.com", {
+                const res = await fetch("https://formsubmit.co/ajax/b59497ce6d645fa61b2d5178d890c82e", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
