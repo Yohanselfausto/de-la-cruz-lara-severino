@@ -9,30 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-page="home">
 
-<!-- HEADER -->
-<header class="header">
-    <div class="container nav-container">
-        <div class="logo-area">
-            <img src="images/logo.png" alt="Logo De la Cruz, Lara & Severino" class="logo-img">
-            <div class="logo-text">
-                <div class="logo-firma">De la Cruz, Lara <span>&</span> Severino</div>
-                <div class="logo-sub">ABOGADOS</div>
-            </div>
-        </div>
-        <nav>
-            <ul class="menu">
-                <li><a href="#inicio" class="active">Inicio</a></li>
-                <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <a href="#contacto" class="btn-header"><i class="fas fa-calendar-alt"></i> Agenda tu consulta</a>
-    </div>
-</header>
-
+<div id="site-header"></div>
 <main>
     <!-- HERO -->
     <section id="inicio" class="hero">
@@ -127,27 +106,30 @@
             </div>
             <div class="about-right">
                 <div class="about-team">
-                    <div class="team-member">
+                    <a href="sobre-fausto.html" class="team-member" aria-label="Ver perfil profesional de Fausto De La Cruz">
                         <div class="member-img-wrap">
                             <img src="images/fausto.png" alt="Fausto De La Cruz" class="member-img">
                         </div>
                         <h3>LIC. FAUSTO DE LA CRUZ</h3>
                         <p>Abogado</p>
-                    </div>
-                    <div class="team-member">
+                        <span class="profile-link">Ver perfil <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="sobre-flor.html" class="team-member" aria-label="Ver perfil profesional de Flor Lara">
                         <div class="member-img-wrap">
                             <img src="images/flor.png" alt="Flor Lara" class="member-img">
                         </div>
                         <h3>LICDA. FLOR LARA</h3>
                         <p>Abogada</p>
-                    </div>
-                    <div class="team-member">
+                        <span class="profile-link">Ver perfil <i class="fas fa-arrow-right"></i></span>
+                    </a>
+                    <a href="sobre-nathanael.html" class="team-member" aria-label="Ver perfil profesional de Nathanael Severino">
                         <div class="member-img-wrap">
                             <img src="images/nathanael.png" alt="Nathanael Severino" class="member-img">
                         </div>
                         <h3>LIC. NATHANAEL SEVERINO</h3>
                         <p>Abogado</p>
-                    </div>
+                        <span class="profile-link">Ver perfil <i class="fas fa-arrow-right"></i></span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -161,26 +143,35 @@
                     <span class="section-eyebrow light">ESTAMOS PARA AYUDARTE</span>
                     <h2>Agenda tu consulta personalizada</h2>
                     <div class="gold-line-left"></div>
-                    <p>Cuéntame tu caso y te ofreceré la mejor estrategia legal para ti.</p>
+                    <p>Cuéntenos su caso y le ofreceremos la mejor estrategia legal para usted.</p>
                     <ul class="contact-info-list">
-                        <li><i class="fas fa-phone-alt"></i> 809.123.4567</li>
-                        <li><i class="fas fa-envelope"></i> tuemail@tudominio.com</li>
+                        <li><i class="fas fa-phone-alt"></i><i class="fab fa-whatsapp"></i>+1 (829) 987-2857 - Fausto De La Cruz</li>
+                        <li><i class="fas fa-phone-alt"></i><i class="fab fa-whatsapp"></i>+1 (849) 530-5221 - Flor Lara</li>
+                        <li><i class="fas fa-phone-alt"></i><i class="fab fa-whatsapp"></i>+1 (849) 259-8799 - Nathanael Severino</li>
+                        <li><i class="fas fa-envelope"></i> info@delacruzlaraseverino.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Santo Domingo, República Dominicana</li>
                     </ul>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/company/de-la-cruz-lara-y-severino/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/dls.abogados" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/18oiuTxrkp/?mibextid=wwXIfr" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@dls.abogados" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/18299872857" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
                 <div class="contact-right">
                     <form class="contact-form" id="contactForm">
                         <div class="form-row">
-                            <input type="text" placeholder="Nombre completo" required>
-                            <input type="email" placeholder="Correo electrónico" required>
+                            <input type="text" name="nombre" id="f-nombre" placeholder="Nombre completo" required>
+                            <input type="email" name="email" id="f-email" placeholder="Correo electrónico" required>
                         </div>
                         <div class="form-row">
-                            <input type="tel" placeholder="Teléfono" required>
-                            <input type="text" placeholder="Asunto" required>
+                            <input type="tel" name="telefono" id="f-telefono" placeholder="Teléfono" required>
+                            <input type="text" name="asunto" id="f-asunto" placeholder="Asunto" required>
                         </div>
-                        <textarea placeholder="Cuéntame tu caso..." rows="5" required></textarea>
-                        <button type="submit"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
-                        <p class="response-note">*Respondemos todas las consultas en menos de 24 horas.</p>
+                        <textarea name="mensaje" id="f-mensaje" placeholder="Cuéntame tu caso..." rows="5" required></textarea>
+                        <button type="submit" id="submitBtn"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+                        <p class="response-note" id="formStatus">*Respondemos todas las consultas en menos de 24 horas.</p>
                     </form>
                 </div>
             </div>
@@ -188,56 +179,8 @@
     </section>
 </main>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-logo-area">
-                <div class="footer-logo-wrap">
-                    <img src="images/logo.png" alt="Logo" class="footer-logo-img">
-                    <div>
-                        <div class="logo-firma-footer">De la Cruz, Lara <span>&</span> Severino</div>
-                        <div class="logo-sub-footer">ABOGADOS</div>
-                        <div class="logo-eslogan-footer">COMPROMISO LEGAL. SOLUCIONES REALES.</div>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h4>ENLACES RÁPIDOS</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#sobre-nosotros">Sobre nosotros</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>CONTACTO</h4>
-                    <ul>
-                        <li><i class="fas fa-phone-alt"></i> 809.123.4567</li>
-                        <li><i class="fas fa-envelope"></i> tuemail@tudominio.com</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Santo Domingo, República Dominicana</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 De la Cruz, Lara & Severino Abogados. Todos los derechos reservados.</p>
-            <p class="footer-quote">Diseñado con excelencia para proteger lo que más importa.</p>
-        </div>
-    </div>
-</footer>
-
-<a href="https://wa.me/18091234567" class="whatsapp-btn" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
-
+<div id="site-footer"></div>
+<script src="js/layout.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

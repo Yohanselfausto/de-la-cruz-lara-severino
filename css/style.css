@@ -291,8 +291,10 @@ SERVICIOS
 .services-header span {
     display: inline-block;
     color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 4px;
     text-transform: uppercase;
 }
 
@@ -305,9 +307,10 @@ SERVICIOS
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--border-light);
-    border: 1px solid var(--border-light);
+    gap: 0;
+    background: white;
+    border-top: 1px solid var(--border-light);
+    border-left: 1px solid var(--border-light);
 }
 
 .service-item {
@@ -315,6 +318,8 @@ SERVICIOS
     padding: 36px 20px;
     background: white;
     transition: 0.3s;
+    border-right: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
 }
 
 .service-item:hover {
@@ -458,6 +463,10 @@ CONTACTO
     align-items: start;
 }
 
+.contact-right {
+    padding-top: 42px;
+}
+
 .contact-left h2 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.6rem;
@@ -491,6 +500,32 @@ CONTACTO
     color: var(--gold);
     width: 18px;
     font-size: 1rem;
+}
+
+.contact-social {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-social a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 1.1rem;
+    transition: 0.3s;
+    background: #fafaf8;
+}
+
+.contact-social a:hover {
+    background: var(--gold);
+    color: white;
+    border-color: var(--gold);
 }
 
 .contact-form {
@@ -730,6 +765,7 @@ RESPONSIVE
     .hero-image { display: none; }
     .about-container { grid-template-columns: 1fr; gap: 40px; }
     .contact-wrapper { grid-template-columns: 1fr; gap: 40px; }
+    .contact-right { padding-top: 0; }
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-top { flex-direction: column; }
     .footer-bottom { flex-direction: column; text-align: center; }
@@ -748,4 +784,462 @@ RESPONSIVE
 @media (max-width: 480px) {
     .services-grid { grid-template-columns: 1fr; }
     .about-team { grid-template-columns: 1fr; max-width: 200px; margin: 0 auto; }
+}
+
+/* PAGINAS LEGALES */
+
+.legal-page{
+    padding-top:150px;
+    padding-bottom:80px;
+    background:#fff;
+}
+
+.legal-section{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.legal-section h1{
+    font-family:'Cormorant Garamond', serif;
+    font-size:3rem;
+    color:var(--navy);
+    margin-bottom:30px;
+}
+
+.legal-section h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.8rem;
+    color:var(--navy);
+    margin-top:40px;
+    margin-bottom:15px;
+}
+
+.legal-section p{
+    color:var(--text-light);
+    line-height:1.9;
+    margin-bottom:18px;
+}
+
+/* ==========================================
+PERFILES PROFESIONALES
+========================================== */
+.team-member {
+    display: block;
+    color: inherit;
+    cursor: pointer;
+}
+
+.team-member .profile-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    color: rgba(255,255,255,0.72);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s;
+}
+
+.team-member:hover .profile-link {
+    color: var(--gold);
+}
+
+.profile-hero {
+    padding-top: 142px;
+    background: var(--navy);
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-hero::after {
+    content: "DLS";
+    position: absolute;
+    right: 8%;
+    bottom: -75px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.045);
+    letter-spacing: -12px;
+    pointer-events: none;
+}
+
+.profile-hero-inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.profile-hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.profile-role {
+    color: var(--gold);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 28px;
+}
+
+.profile-contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    margin-bottom: 30px;
+}
+
+.profile-contact-row a,
+.profile-contact-row span {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: rgba(255,255,255,0.86);
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.profile-contact-row a:hover {
+    color: var(--gold);
+}
+
+.profile-contact-row i {
+    color: var(--gold);
+}
+
+.profile-cta-row {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.profile-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--gold);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.profile-cta:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+.profile-cta.outline {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.32);
+}
+
+.profile-cta.outline:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: transparent;
+}
+
+.profile-photo-card {
+    justify-self: end;
+    width: min(370px, 100%);
+    border-bottom: 4px solid var(--gold);
+    position: relative;
+}
+
+.profile-photo-card img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    object-position: top;
+}
+
+.profile-nav {
+    background: white;
+    border-bottom: 1px solid var(--border-light);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.04);
+}
+
+.profile-nav-inner {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.profile-nav-inner a {
+    color: #9a9a9a;
+    padding: 20px 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.profile-nav-inner a:hover,
+.profile-nav-inner a.active {
+    color: var(--navy);
+    border-bottom-color: var(--gold);
+}
+
+.profile-content {
+    background: #fbfbfa;
+    padding: 70px 0 90px;
+}
+
+.profile-content-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.profile-main-card,
+.profile-side-card {
+    background: white;
+    border: 1px solid var(--border-light);
+    padding: 38px;
+}
+
+.profile-main-card h2,
+.profile-side-card h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--navy);
+    margin-bottom: 18px;
+}
+
+.profile-main-card p {
+    color: var(--text-light);
+    line-height: 1.95;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.profile-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.profile-info-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.profile-info-list i {
+    color: var(--gold);
+    width: 18px;
+    margin-top: 4px;
+}
+
+.profile-services-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.profile-services-tags span {
+    border: 1px solid var(--border-light);
+    color: var(--navy);
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    background: #fafaf8;
+    border-radius: 2px;
+}
+
+.profile-next {
+    margin-top: 22px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.profile-next a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold);
+    font-size: 0.86rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 992px) {
+    .profile-hero-inner,
+    .profile-content-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .profile-photo-card {
+        justify-self: start;
+        max-width: 300px;
+    }
+
+    .profile-hero-text h1 {
+        font-size: 2.6rem;
+    }
+
+    .profile-hero::after {
+        font-size: 10rem;
+        right: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-hero {
+        padding-top: 125px;
+        padding-bottom: 55px;
+    }
+
+    .profile-contact-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .profile-nav-inner {
+        gap: 22px;
+    }
+
+    .profile-main-card,
+    .profile-side-card {
+        padding: 26px;
+    }
+}
+
+
+/* ==========================================
+HERO COMO BANNER COMPLETO
+========================================== */
+/* La imagen deja de comportarse como una foto dentro de una columna
+   y pasa a ocupar todo el fondo del hero. */
+/* ==========================================
+AJUSTE FINAL HERO - IMAGEN MÁS ANCHA
+========================================== */
+
+/* ==========================================
+HERO FINAL - IMAGEN ANCHA SIN CORTAR ARRIBA
+========================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 70px;
+    overflow: hidden;
+    background: #0a1a2f;
+}
+
+/* Imagen de fondo del hero */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -70px;
+    bottom: 0;
+    left: 25%;
+    z-index: 0;
+
+    background-image: url("../images/hero-team.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+
+    background-color: #0a1a2f;
+}
+
+/* Degradado encima de la imagen para integrar con el azul */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 26, 47, 0.98) 0%,
+            rgba(10, 26, 47, 0.94) 32%,
+            rgba(10, 26, 47, 0.76) 52%,
+            rgba(10, 26, 47, 0.36) 100%
+        );
+}
+
+/* El contenido queda arriba de la imagen */
+.hero-container {
+    position: relative;
+    z-index: 2;
+    grid-template-columns: 0.9fr 1.1fr;
+}
+
+/* Oculta la imagen normal de la derecha porque ya se usa como fondo */
+.hero-image {
+    display: none;
+}
+
+/* Mantiene el texto legible */
+.hero-text {
+    max-width: 620px;
+}
+
+/* Ajuste responsive */
+@media (max-width: 992px) {
+    .hero {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(10, 26, 47, 0.98) 0%,
+                rgba(10, 26, 47, 0.92) 60%,
+                rgba(10, 26, 47, 0.75) 100%
+            ),
+            url("../images/hero-team.png");
+        background-size: cover;
+        background-position: center right;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(10, 26, 47, 0.99) 0%,
+                rgba(10, 26, 47, 0.95) 100%
+            ),
+            url("../images/hero-team.png");
+        background-size: cover;
+        background-position: center;
+    }
 }
